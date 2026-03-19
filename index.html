@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -226,6 +227,17 @@ section{padding:5rem 3rem;max-width:1300px;margin:0 auto;}
 .exp-pts li{font-size:.9rem;color:var(--muted);line-height:1.6;padding-left:1.2rem;position:relative;}
 .exp-pts li::before{content:'>';position:absolute;left:0;color:var(--cyan);font-family:'Share Tech Mono',monospace;font-size:.7rem;top:.2rem;}
 .exp-pts li strong{color:var(--pale);}
+
+/* STORY SECTION */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+.story-block{background:var(--card);border:1px solid var(--border);padding:2rem;position:relative;}
+.story-block::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--cyan),var(--blue),transparent);}
+.story-block p{font-size:1rem;color:var(--muted);line-height:1.85;}
+.story-block p + p{margin-top:1rem;}
+.story-highlight{color:var(--pale);font-weight:600;}
+.q-block{background:rgba(0,245,255,0.04);border-left:3px solid var(--cyan);padding:1.25rem 1.5rem;margin-top:1rem;}
+.q-block p{font-family:'Share Tech Mono',monospace;font-size:.8rem;color:var(--cyan);line-height:1.7;}
+
 .skills-outer{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
 .skill-panel{background:var(--card);border:1px solid var(--border);padding:1.5rem;position:relative;overflow:hidden;transition:all .3s;opacity:0;transform:translateY(18px);}
 .skill-panel.vis{opacity:1;transform:translateY(0);}
@@ -256,6 +268,23 @@ section{padding:5rem 3rem;max-width:1300px;margin:0 auto;}
 .cert-ic{font-size:1.7rem;flex-shrink:0;}
 .cert-name{font-family:'Orbitron',monospace;font-size:.78rem;color:var(--white);margin-bottom:.25rem;letter-spacing:.03em;}
 .cert-sub{font-family:'Share Tech Mono',monospace;font-size:.6rem;color:var(--dim);}
+
+/* HOBBIES */
+.hobbies-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;}
+.hobby-card{
+  background:var(--card);border:1px solid var(--border);
+  padding:1.75rem;position:relative;overflow:hidden;
+  transition:all .3s;opacity:0;transform:translateY(18px);
+}
+.hobby-card.vis{opacity:1;transform:translateY(0);}
+.hobby-card:hover{border-color:rgba(0,245,255,0.3);box-shadow:var(--glow);}
+.hobby-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,var(--blue),var(--cyan),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.hobby-card:hover::after{transform:scaleX(1);}
+.hobby-icon{font-size:2rem;margin-bottom:.75rem;display:block;}
+.hobby-title{font-family:'Orbitron',monospace;font-size:.82rem;color:var(--white);margin-bottom:.6rem;letter-spacing:.04em;}
+.hobby-desc{font-size:.9rem;color:var(--muted);line-height:1.7;}
+.hobby-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;}
+
 #contact{text-align:center;}
 .contact-box{background:var(--card);border:1px solid var(--border);padding:4.5rem 3rem;position:relative;overflow:hidden;}
 .contact-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--cyan),var(--blue),var(--cyan),transparent);}
@@ -275,6 +304,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
   section{padding:4rem 1.5rem;}
   nav{padding:0 1.25rem;}
   .nav-links{display:none;}
+  .story-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -290,6 +320,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#interests">Interests</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -305,29 +336,28 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
     </h1>
     <p class="hero-role"><span id="typed-text"></span><span class="typed-cur"></span></p>
 
-    <p class="hero-desc">I make deployments boring — in the best way. No surprises, no 2am pages, no "works on my machine." I build the cloud infrastructure that lets your team move fast without breaking things.</p>
+    <p class="hero-desc">I obsess over two things: systems that don't break and cloud bills that don't surprise you. Three months into a role, I had already cut AWS spend by 36%, locked down a full security audit, and shipped a monitoring system that catches issues in under 60 seconds.</p>
 
     <div class="badge-strip">
-      <span class="badge b-blue"><img class="badge-img" >AWS</span>
+      <span class="badge b-ora">☁️ AWS</span>
       <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"> Azure</span>
       <span class="badge b-cyan"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="K8s"> Kubernetes</span>
       <span class="badge b-cyan"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"> Docker</span>
       <span class="badge b-red"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"> Jenkins</span>
-      <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1) brightness(0.8) sepia(1) hue-rotate(90deg) saturate(3);"> GitHub</span>
+      <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1) brightness(0.8) sepia(1) hue-rotate(90deg) saturate(3);"> GitHub Actions</span>
       <span class="badge b-purp"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform"> Terraform</span>
       <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt="Ansible"> Ansible</span>
       <span class="badge b-teal"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana"> Grafana</span>
       <span class="badge b-purp"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt="Prometheus"> Prometheus</span>
       <span class="badge b-yel"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</span>
-      <span class="badge b-dim" style="color:#8bc34a;border-color:rgba(139,195,74,0.3);background:rgba(139,195,74,0.06);"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash"> Bash</span>
+      <span class="badge b-grn" style="color:#8bc34a;border-color:rgba(139,195,74,0.3);background:rgba(139,195,74,0.06);"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash"> Bash</span>
       <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt="ArgoCD"> ArgoCD</span>
       <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"> Linux</span>
       <span class="badge b-purp">🤖 GitHub Copilot</span>
-      <span class="badge b-teal">⚡ AI-Driven Automation</span>
     </div>
 
     <div class="hero-cta">
-      <a href="mailto:anuragjosyula17@gmail.com" class="btn btn-primary">⚡ Connect(mail)</a>
+      <a href="mailto:anuragjosyula17@gmail.com" class="btn btn-primary">⚡ Connect</a>
       <a href="https://www.linkedin.com/in/anurag-josyula/" target="_blank" class="btn btn-outline">LinkedIn</a>
       <a href="https://github.com/anuragjosyula" target="_blank" class="btn btn-outline">GitHub</a>
     </div>
@@ -338,7 +368,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="stat-icon">💰</div>
       <div>
         <div class="stat-val">36%</div>
-        <div class="stat-lbl">AWS COSTS SLASHED</div>
+        <div class="stat-lbl">AWS COSTS CUT</div>
         <div class="stat-sub">Found and killed idle spend</div>
       </div>
     </div>
@@ -371,8 +401,30 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div>
         <div class="stat-val">25%</div>
         <div class="stat-lbl">FASTER INCIDENT CLOSE</div>
-        <div class="stat-sub">Runbooks that actually work</div>
+        <div class="stat-sub">Runbooks that actually get used</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO I AM -->
+<section id="about" style="padding-top:0;">
+  <div class="sec-head">
+    <div class="sec-tag">Who I Am</div>
+    <h2 class="sec-title">Beyond the Resume</h2>
+  </div>
+  <div class="story-grid">
+    <div class="story-block">
+      <p>I got into DevOps because I was tired of watching smart engineers waste time on problems that shouldn't exist. Flaky deployments. Cloud bills nobody could explain. On-call alerts that fired at 2am for things that weren't actually broken.</p>
+      <p>My MS in Computer Engineering gave me the fundamentals. But the real learning happened on actual production systems, under real pressure. That's where I figured out what actually matters.</p>
+      <p><span class="story-highlight">I don't just automate tasks.</span> I try to understand why the manual process existed, what breaks when you remove it, and how to make the automated version more trustworthy than the human one was.</p>
+    </div>
+    <div class="story-block">
+      <p>Right now I'm at Vibes Meet LLC, keeping 7 production APIs healthy for 10k+ users. Before that, Chicago Education Advocacy Cooperative, where I walked into a team drowning in deployment failures and left them with a working GitOps setup.</p>
+      <div class="q-block">
+        <p>The question I ask at every job: what's the most expensive thing people are doing manually that nobody has stopped to question?</p>
+      </div>
+      <p style="margin-top:1rem;">I'm based in NJ, AWS Certified Solutions Architect, and always interested in teams that care about reliability as much as speed.</p>
     </div>
   </div>
 </section>
@@ -391,12 +443,12 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       </div>
       <div class="exp-co">Vibes Meet LLC — New York, NY</div>
       <ul class="exp-pts">
-        <li>Took a manual, rollback-prone release process and turned it into a <strong>GitHub Actions + Docker</strong> pipeline that just works — every sprint, on time.</li>
-        <li>Audited the AWS bill top to bottom. Killed idle ECS tasks, right-sized EC2 instances across 3 environments, and saved the company <strong>36% monthly</strong>.</li>
-        <li>Deployed and maintained 7 production API services on <strong>ECS Fargate</strong> — 10,000+ monthly active users, 99.9% uptime, zero guesswork thanks to CloudWatch.</li>
-        <li>Built an alerting system so good that problems get flagged in <strong>under 60 seconds</strong> via Slack before users even notice something's off.</li>
-        <li>Locked down the AWS account — VPC, IAM, security groups — and passed a full third-party security audit with zero open findings.</li>
-        <li>Wrote the runbooks nobody wants to write. On-call resolution time dropped by <strong>25%</strong> because the next person on shift actually knew what to do.</li>
+        <li>Rebuilt the release process from scratch using <strong>GitHub Actions + Docker</strong>. Manual deploys that used to require babysitting now run unattended every sprint.</li>
+        <li>Did a full AWS spend audit. Found idle ECS tasks, oversized EC2 instances across 3 environments. Killed them. Bill dropped <strong>36% month-over-month</strong>.</li>
+        <li>Running 7 production API services on <strong>ECS Fargate</strong>. 10,000+ monthly active users. CloudWatch Logs Insights keeps me honest on HTTP 5xx rates and p99 latency.</li>
+        <li>Built alerting that fires in <strong>under 60 seconds</strong> via Slack. Users find out from the app, not from us.</li>
+        <li>Hardened VPC, IAM, and security groups. Zero open findings on the third-party security audit.</li>
+        <li>Wrote the runbooks everyone said they'd write and never did. On-call resolution dropped <strong>25%</strong> because the next person on shift actually knew what to do.</li>
       </ul>
     </div>
 
@@ -405,11 +457,11 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
         <div class="exp-title">DevOps Engineer</div>
         <div class="exp-period">AUG – OCT 2025</div>
       </div>
-      <div class="exp-co">Chicago Education Advocacy Cooperative — Chicago, IL</div>
+      <div class="exp-co">Chicago Education Advocacy Cooperative — Chicago, IL (Contract)</div>
       <ul class="exp-pts">
-        <li>Walked into a team dealing with flaky manual deployments. Left them with a fully Terraformed <strong>Amazon EKS</strong> setup and <strong>40% fewer</strong> deployment failures.</li>
-        <li>Set up NGINX Ingress, Kubernetes namespaces, and IRSA so services could only touch what they were supposed to — no more cross-service permission nightmares.</li>
-        <li>Standardized the entire release workflow with GitHub Actions. What used to take 45 minutes now takes under 30, every time.</li>
+        <li>Four services with no CI/CD and recurring deployment failures. I rebuilt the Terraform setup for <strong>Amazon EKS</strong> from scratch. Failures dropped <strong>40%</strong> in two weeks.</li>
+        <li>Set up GitHub Actions pipelines, NGINX Ingress, and Kubernetes RBAC so services only touch what they're supposed to. No more cross-service permission bleed.</li>
+        <li>Standardized the release process. What used to take 45 minutes now takes under 30, on every deploy, not just the good ones.</li>
       </ul>
     </div>
 
@@ -420,9 +472,9 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       </div>
       <div class="exp-co">George Mason University — Fairfax, VA</div>
       <ul class="exp-pts">
-        <li>Scripted away the tedium — <strong>PowerShell + Entra ID</strong> automation cut the time to onboard a new user from hours to minutes across a 5,000-person campus.</li>
-        <li>Kept the Microsoft 365 environment clean: Exchange Online, Intune, distribution groups — 95%+ device compliance, maintained quietly in the background.</li>
-        <li>First line of defense for hardware, software, and connectivity issues across Windows, macOS, and Linux. 95% resolved within SLA, no escalation needed.</li>
+        <li>Wrote <strong>PowerShell + Entra ID</strong> scripts that cut new user onboarding from hours to minutes. Did this for a 5,000-person campus without any dedicated DevOps team.</li>
+        <li>Kept Microsoft 365 clean: Exchange Online, Intune, distribution groups. Device compliance stayed above <strong>95%</strong> across all managed endpoints.</li>
+        <li>First-line support across Windows, macOS, and Linux. <strong>95% of tickets</strong> closed within SLA, no escalation needed.</li>
       </ul>
     </div>
 
@@ -441,13 +493,13 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="sp-cat">Automation</div>
       <div class="sp-name">CI/CD & DevOps</div>
       <div class="sp-badges">
-        <span class="badge b-red"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="">Jenkins</span>
-        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" style="filter:invert(1) brightness(0.8) sepia(1) hue-rotate(90deg) saturate(3);">GH Actions</span>
-        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="">AZ Pipelines</span>
-        <span class="badge b-cyan"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="">Docker</span>
-        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt="">ArgoCD</span>
+        <span class="badge b-red"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt=""> Jenkins</span>
+        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" style="filter:invert(1) brightness(0.8) sepia(1) hue-rotate(90deg) saturate(3);"> GH Actions</span>
+        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""> AZ Pipelines</span>
+        <span class="badge b-cyan"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt=""> Docker</span>
+        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt=""> ArgoCD</span>
         <span class="badge b-purp">⛑️ Helm</span>
-        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt="">Ansible</span>
+        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt=""> Ansible</span>
         <span class="badge b-ora">📦 Packer</span>
       </div>
     </div>
@@ -457,13 +509,12 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="sp-cat">Infrastructure</div>
       <div class="sp-name">Cloud Platforms</div>
       <div class="sp-badges">
-        <span class="badge b-ora"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="">EC2</span>
-        <span class="badge b-ora"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="">ECS/EKS</span>
-        <span class="badge b-ora"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="">S3 / IAM</span>
-        <span class="badge b-ora"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="">Fargate</span>
-        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="">AKS</span>
-        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="">ACR</span>
-        <span class="badge b-purp"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="">Terraform</span>
+        <span class="badge b-ora">☁️ EC2 / ECS / EKS</span>
+        <span class="badge b-ora">🪣 S3 / IAM</span>
+        <span class="badge b-ora">⚡ Fargate / Lambda</span>
+        <span class="badge b-ora">👁️ CloudWatch</span>
+        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""> AKS / ACR</span>
+        <span class="badge b-purp"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt=""> Terraform</span>
       </div>
     </div>
 
@@ -478,7 +529,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
         <span class="badge b-blue">🌐 NGINX Ingress</span>
         <span class="badge b-purp">🔍 Trivy</span>
         <span class="badge b-grn">📊 SonarQube</span>
-        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="">Entra ID</span>
+        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""> Entra ID</span>
       </div>
     </div>
 
@@ -487,11 +538,12 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="sp-cat">Observability</div>
       <div class="sp-name">Monitoring & Alerting</div>
       <div class="sp-badges">
-        <span class="badge b-teal"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="">Grafana Cloud</span>
-        <span class="badge b-purp"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt="">Prometheus</span>
+        <span class="badge b-teal"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt=""> Grafana Cloud</span>
+        <span class="badge b-purp"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt=""> Prometheus</span>
         <span class="badge b-ora">☁️ CloudWatch</span>
         <span class="badge b-cyan">🔔 AWS SNS</span>
         <span class="badge b-grn">📋 SLO / SLA</span>
+        <span class="badge b-blue">📡 Azure Monitor</span>
       </div>
     </div>
 
@@ -500,18 +552,18 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="sp-cat">Code</div>
       <div class="sp-name">Languages & Scripting</div>
       <div class="sp-badges">
-        <span class="badge b-yel"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
-        <span class="badge b-dim" style="color:#8bc34a;border-color:rgba(139,195,74,0.3);background:rgba(139,195,74,0.06);"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="">Bash</span>
+        <span class="badge b-yel"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt=""> Python</span>
+        <span class="badge b-grn" style="color:#8bc34a;border-color:rgba(139,195,74,0.3);background:rgba(139,195,74,0.06);"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt=""> Bash</span>
         <span class="badge b-blue">💙 PowerShell</span>
         <span class="badge b-cyan">📄 YAML</span>
-        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="">Git</span>
-        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="">Linux</span>
+        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""> Git</span>
+        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""> Linux</span>
       </div>
     </div>
 
     <div class="skill-panel" style="border-color:rgba(0,245,255,0.25);background:linear-gradient(135deg,var(--card),rgba(0,119,255,0.04));">
       <div class="sp-icon">🤖</div>
-      <div class="sp-cat">AI & Intelligent Tooling</div>
+      <div class="sp-cat">AI & Tooling</div>
       <div class="sp-name">AI-Assisted DevOps</div>
       <div class="sp-badges">
         <span class="badge b-purp">🤖 GitHub Copilot</span>
@@ -534,35 +586,95 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
 
     <div class="proj-card">
       <div class="proj-num">01</div>
-      <div class="proj-date">SEP 2025</div>
-      <div class="proj-title">GitOps Microservices on AKS</div>
+      <div class="proj-date">MAR 2026</div>
+      <div class="proj-title">Serverless Image Processing Pipeline</div>
       <ul class="proj-pts">
-        <li>Took a 3-service voting app and gave it a proper home on AKS — full Azure DevOps pipeline, Docker builds, ACR registry. Release time went from 15 min to under 7.</li>
-        <li>ArgoCD handles every deploy with a full audit trail. Dev and prod stay isolated. Nothing ships without a record of who pushed what.</li>
+        <li>Every image upload triggers AWS Lambda (Python) to automatically generate 5 variants: compressed, WebP, PNG, thumbnail. Zero manual steps, no servers to manage.</li>
+        <li>Packaged Pillow as a Lambda Layer with Linux-compatible wheels. Full IaC via Terraform: IAM policies, S3 encryption, CloudWatch logs. One <code>terraform apply</code> deploys everything.</li>
       </ul>
       <div class="proj-stack">
-        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="">AKS</span>
-        <span class="badge b-cyan" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="">Docker</span>
-        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt="">ArgoCD</span>
-        <span class="badge b-cyan" style="font-size:.58rem;padding:.2rem .5rem;">NGINX Ingress</span>
-        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="">K8s</span>
+        <span class="badge b-ora" style="font-size:.58rem;padding:.2rem .5rem;">⚡ Lambda</span>
+        <span class="badge b-ora" style="font-size:.58rem;padding:.2rem .5rem;">🪣 S3</span>
+        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt=""> Terraform</span>
+        <span class="badge b-yel" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt=""> Python</span>
       </div>
     </div>
 
     <div class="proj-card">
       <div class="proj-num">02</div>
-      <div class="proj-date">JUN 2025</div>
-      <div class="proj-title">Security-First CI/CD with Jenkins & ArgoCD</div>
+      <div class="proj-date">SEP 2025</div>
+      <div class="proj-title">GitOps Microservices on AKS</div>
       <ul class="proj-pts">
-        <li>Built a pipeline for a Java Spring Boot app that doesn't just deploy — it verifies. SonarQube quality gates, Trivy CVE scanning, ArgoCD GitOps deploy. Nothing unsafe gets through.</li>
-        <li>Parallel test stages and Docker layer caching cut build-to-deploy time by 35%. Caught 2 critical vulnerabilities before they ever touched a cluster.</li>
+        <li>Moved a 3-service voting app to AKS with a full Azure DevOps pipeline: Docker build, ACR push, deploy. Release time from 15 minutes to under 7.</li>
+        <li>ArgoCD tracks every deploy. Dev and prod stay isolated. Nothing ships without a full audit trail of who pushed what.</li>
       </ul>
       <div class="proj-stack">
-        <span class="badge b-red" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="">Jenkins</span>
+        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""> AKS</span>
+        <span class="badge b-cyan" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt=""> Docker</span>
+        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt=""> ArgoCD</span>
+        <span class="badge b-cyan" style="font-size:.58rem;padding:.2rem .5rem;">NGINX Ingress</span>
+        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt=""> K8s</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-num">03</div>
+      <div class="proj-date">JUN 2025</div>
+      <div class="proj-title">Security-First CI/CD Pipeline</div>
+      <ul class="proj-pts">
+        <li>Jenkins pipeline for a Java Spring Boot app that doesn't just build, it verifies. SonarQube with 80% coverage gate, Trivy CVE scanning, ArgoCD GitOps deploy. Nothing unsafe reaches the cluster.</li>
+        <li>Parallel test stages and Docker layer caching cut build-to-deploy time by 35%. Caught 2 critical CVEs before they ever hit production.</li>
+      </ul>
+      <div class="proj-stack">
+        <span class="badge b-red" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt=""> Jenkins</span>
         <span class="badge b-grn" style="font-size:.58rem;padding:.2rem .5rem;">SonarQube</span>
         <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;">Trivy</span>
-        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt="">ArgoCD</span>
-        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="">K8s</span>
+        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt=""> ArgoCD</span>
+        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt=""> K8s</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOBBIES / INTERESTS -->
+<section id="interests">
+  <div class="sec-head">
+    <div class="sec-tag">Off the Clock</div>
+    <h2 class="sec-title">What I'm Into</h2>
+  </div>
+  <div class="hobbies-grid">
+
+    <div class="hobby-card">
+      <span class="hobby-icon">🤖</span>
+      <div class="hobby-title">Exploring AI Agents</div>
+      <div class="hobby-desc">I spend a lot of time testing what current AI agents can actually do versus what they're claimed to do. The gap is interesting. I'm particularly interested in agents that integrate with DevOps workflows: auto-triage, automated remediation, anomaly detection that doesn't just page you but actually fixes things.</div>
+      <div class="hobby-tags">
+        <span class="badge b-purp" style="font-size:.56rem;">LLM Tooling</span>
+        <span class="badge b-teal" style="font-size:.56rem;">Agentic Systems</span>
+        <span class="badge b-cyan" style="font-size:.56rem;">Auto-Remediation</span>
+      </div>
+    </div>
+
+    <div class="hobby-card">
+      <span class="hobby-icon">⚡</span>
+      <div class="hobby-title">DevOps Practices</div>
+      <div class="hobby-desc">I read post-mortems and incident reports the way some people read news. They're the most honest documentation that exists. I'm always digging into how other teams structure their on-call rotations, what their deployment frequency looks like, and where they draw the line between automation and human judgment.</div>
+      <div class="hobby-tags">
+        <span class="badge b-grn" style="font-size:.56rem;">SRE Culture</span>
+        <span class="badge b-blue" style="font-size:.56rem;">Post-Mortems</span>
+        <span class="badge b-ora" style="font-size:.56rem;">Platform Engineering</span>
+      </div>
+    </div>
+
+    <div class="hobby-card">
+      <span class="hobby-icon">💸</span>
+      <div class="hobby-title">Cloud Spend Efficiency</div>
+      <div class="hobby-desc">Most cloud bills are a graveyard of forgotten resources. I find it genuinely satisfying to dig through cost allocation reports, spot the waste, and figure out whether you need Reserved Instances, Spot, or just to shut the thing off. My record so far: 36% off a live production AWS bill without touching anything that mattered.</div>
+      <div class="hobby-tags">
+        <span class="badge b-ora" style="font-size:.56rem;">FinOps</span>
+        <span class="badge b-cyan" style="font-size:.56rem;">Right-Sizing</span>
+        <span class="badge b-grn" style="font-size:.56rem;">Cost Allocation</span>
       </div>
     </div>
 
@@ -583,7 +695,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       </div>
     </div>
     <div class="cert-card">
-      <div class="cert-ic"><img style="width:2rem;height:2rem;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS"></div>
+      <div class="cert-ic">☁️</div>
       <div>
         <div class="cert-name">AWS Solutions Architect – Associate</div>
         <div class="cert-sub">Credential: 807b5556</div>
@@ -603,7 +715,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
   <div class="contact-box">
     <div class="sec-tag" style="justify-content:center;margin-bottom:.75rem;">Let's Talk</div>
     <h2 class="sec-title">Get in Touch</h2>
-    <p class="contact-desc">If you're looking for someone who takes infrastructure seriously and ships without drama — I'd love to connect.</p>
+    <p class="contact-desc">If you're building something that needs to stay up, deploy fast, and not break the bank, I'd like to hear about it.</p>
     <div class="contact-links">
       <a href="mailto:anuragjosyula17@gmail.com" class="btn btn-primary">⚡ anuragjosyula17@gmail.com</a>
       <a href="https://www.linkedin.com/in/anurag-josyula/" target="_blank" class="btn btn-outline">LinkedIn</a>
@@ -618,7 +730,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
 </main>
 
 <footer>
-  Anurag Josyula &nbsp;·&nbsp; DevOps Engineer &nbsp;·&nbsp; Infrastructure that hums. Pipelines that ship.
+  Anurag Josyula &nbsp;·&nbsp; DevOps Engineer &nbsp;·&nbsp; NJ &nbsp;·&nbsp; Open to roles
 </footer>
 
 <script>
@@ -700,7 +812,7 @@ type();
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(en=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('vis'),+(en.target.dataset.d||0));});
 },{threshold:0.1});
-document.querySelectorAll('.exp-card,.skill-panel,.proj-card,.cert-card').forEach((el,i)=>{el.dataset.d=(i%4)*100;obs.observe(el);});
+document.querySelectorAll('.exp-card,.skill-panel,.proj-card,.cert-card,.hobby-card').forEach((el,i)=>{el.dataset.d=(i%4)*100;obs.observe(el);});
 </script>
 </body>
 </html>
