@@ -213,10 +213,9 @@ section{padding:5rem 3rem;max-width:1300px;margin:0 auto;}
 .exp-card{
   background:var(--card);border:1px solid var(--border);
   padding:1.75rem;position:relative;overflow:hidden;
-  transition:all .3s;opacity:0;transform:translateY(18px);
+  transition:border-color .3s,box-shadow .3s;
   clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px));
 }
-.exp-card.vis{opacity:1;transform:translateY(0);}
 .exp-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--cyan),transparent);}
 .exp-card:hover{border-color:rgba(0,245,255,0.3);box-shadow:var(--glow);}
 .exp-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:.5rem;margin-bottom:.3rem;}
@@ -239,8 +238,7 @@ section{padding:5rem 3rem;max-width:1300px;margin:0 auto;}
 .q-block p{font-family:'Share Tech Mono',monospace;font-size:.8rem;color:var(--cyan);line-height:1.7;}
 
 .skills-outer{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
-.skill-panel{background:var(--card);border:1px solid var(--border);padding:1.5rem;position:relative;overflow:hidden;transition:all .3s;opacity:0;transform:translateY(18px);}
-.skill-panel.vis{opacity:1;transform:translateY(0);}
+.skill-panel{background:var(--card);border:1px solid var(--border);padding:1.5rem;position:relative;overflow:hidden;transition:border-color .3s,box-shadow .3s;}
 .skill-panel::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,var(--cyan),var(--blue),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
 .skill-panel:hover{border-color:rgba(0,245,255,0.28);box-shadow:var(--glow);}
 .skill-panel:hover::after{transform:scaleX(1);}
@@ -249,8 +247,7 @@ section{padding:5rem 3rem;max-width:1300px;margin:0 auto;}
 .sp-name{font-family:'Orbitron',monospace;font-size:.78rem;color:var(--white);margin-bottom:1rem;letter-spacing:.04em;}
 .sp-badges{display:flex;flex-wrap:wrap;gap:.45rem;}
 .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.25rem;}
-.proj-card{background:var(--card);border:1px solid var(--border);padding:1.75rem;position:relative;overflow:hidden;transition:all .3s;opacity:0;transform:translateY(18px);cursor:none;}
-.proj-card.vis{opacity:1;transform:translateY(0);}
+.proj-card{background:var(--card);border:1px solid var(--border);padding:1.75rem;position:relative;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s;cursor:none;}
 .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--cyan),var(--blue));transform:scaleX(0);transform-origin:left;transition:transform .35s;}
 .proj-card:hover{border-color:rgba(0,245,255,0.3);box-shadow:var(--glow);transform:translateY(-4px);}
 .proj-card:hover::before{transform:scaleX(1);}
@@ -262,8 +259,7 @@ section{padding:5rem 3rem;max-width:1300px;margin:0 auto;}
 .proj-pts li::before{content:'→';position:absolute;left:0;color:var(--blue);font-size:.75rem;}
 .proj-stack{display:flex;flex-wrap:wrap;gap:.4rem;}
 .cert-grid{display:flex;gap:1.25rem;flex-wrap:wrap;}
-.cert-card{background:var(--card);border:1px solid var(--border);padding:1.4rem 1.75rem;flex:1;min-width:230px;display:flex;align-items:center;gap:1rem;transition:all .3s;opacity:0;transform:translateY(18px);}
-.cert-card.vis{opacity:1;transform:translateY(0);}
+.cert-card{background:var(--card);border:1px solid var(--border);padding:1.4rem 1.75rem;flex:1;min-width:230px;display:flex;align-items:center;gap:1rem;transition:border-color .3s,box-shadow .3s;}
 .cert-card:hover{border-color:rgba(0,245,255,0.3);box-shadow:var(--glow);}
 .cert-ic{font-size:1.7rem;flex-shrink:0;}
 .cert-name{font-family:'Orbitron',monospace;font-size:.78rem;color:var(--white);margin-bottom:.25rem;letter-spacing:.03em;}
@@ -274,9 +270,8 @@ section{padding:5rem 3rem;max-width:1300px;margin:0 auto;}
 .hobby-card{
   background:var(--card);border:1px solid var(--border);
   padding:1.75rem;position:relative;overflow:hidden;
-  transition:all .3s;opacity:0;transform:translateY(18px);
+  transition:border-color .3s,box-shadow .3s;
 }
-.hobby-card.vis{opacity:1;transform:translateY(0);}
 .hobby-card:hover{border-color:rgba(0,245,255,0.3);box-shadow:var(--glow);}
 .hobby-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,var(--blue),var(--cyan),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
 .hobby-card:hover::after{transform:scaleX(1);}
@@ -336,23 +331,23 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
     </h1>
     <p class="hero-role"><span id="typed-text"></span><span class="typed-cur"></span></p>
 
-    <p class="hero-desc">I obsess over two things: systems that don't break and cloud bills that don't surprise me</p>
+    <p class="hero-desc">I obsess over two things: systems that don't break and cloud bills that don't surprise me.</p>
 
     <div class="badge-strip">
       <span class="badge b-ora">☁️ AWS</span>
-      <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"> Azure</span>
-      <span class="badge b-cyan"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="K8s"> Kubernetes</span>
-      <span class="badge b-cyan"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"> Docker</span>
-      <span class="badge b-red"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"> Jenkins</span>
-      <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1) brightness(0.8) sepia(1) hue-rotate(90deg) saturate(3);"> GitHub Actions</span>
-      <span class="badge b-purp"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform"> Terraform</span>
-      <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt="Ansible"> Ansible</span>
-      <span class="badge b-teal"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana"> Grafana</span>
-      <span class="badge b-purp"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt="Prometheus"> Prometheus</span>
-      <span class="badge b-yel"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</span>
-      <span class="badge b-grn" style="color:#8bc34a;border-color:rgba(139,195,74,0.3);background:rgba(139,195,74,0.06);"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash"> Bash</span>
-      <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt="ArgoCD"> ArgoCD</span>
-      <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"> Linux</span>
+      <span class="badge b-blue"><img class="badge-img" src="https://cdn.simpleicons.org/microsoftazure/0078d4" alt="Azure"> Azure</span>
+      <span class="badge b-cyan"><img class="badge-img" src="https://cdn.simpleicons.org/kubernetes/326ce5" alt="K8s"> Kubernetes</span>
+      <span class="badge b-cyan"><img class="badge-img" src="https://cdn.simpleicons.org/docker/2496ed" alt="Docker"> Docker</span>
+      <span class="badge b-red"><img class="badge-img" src="https://cdn.simpleicons.org/jenkins/d24939" alt="Jenkins"> Jenkins</span>
+      <span class="badge b-grn"><img class="badge-img" src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub"> GitHub Actions</span>
+      <span class="badge b-purp"><img class="badge-img" src="https://cdn.simpleicons.org/terraform/7b42bc" alt="Terraform"> Terraform</span>
+      <span class="badge b-grn"><img class="badge-img" src="https://cdn.simpleicons.org/ansible/ee0000" alt="Ansible"> Ansible</span>
+      <span class="badge b-teal"><img class="badge-img" src="https://cdn.simpleicons.org/grafana/f46800" alt="Grafana"> Grafana</span>
+      <span class="badge b-purp"><img class="badge-img" src="https://cdn.simpleicons.org/prometheus/e6522c" alt="Prometheus"> Prometheus</span>
+      <span class="badge b-yel"><img class="badge-img" src="https://cdn.simpleicons.org/python/ffd43b" alt="Python"> Python</span>
+      <span class="badge b-grn" style="color:#8bc34a;border-color:rgba(139,195,74,0.3);background:rgba(139,195,74,0.06);"><img class="badge-img" src="https://cdn.simpleicons.org/gnubash/8bc34a" alt="Bash"> Bash</span>
+      <span class="badge b-blue"><img class="badge-img" src="https://cdn.simpleicons.org/argo/ef7b4d" alt="ArgoCD"> ArgoCD</span>
+      <span class="badge b-grn"><img class="badge-img" src="https://cdn.simpleicons.org/linux/fcc624" alt="Linux"> Linux</span>
       <span class="badge b-purp">🤖 GitHub Copilot</span>
     </div>
 
@@ -494,13 +489,13 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="sp-cat">Automation</div>
       <div class="sp-name">CI/CD & DevOps</div>
       <div class="sp-badges">
-        <span class="badge b-red"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt=""> Jenkins</span>
-        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" style="filter:invert(1) brightness(0.8) sepia(1) hue-rotate(90deg) saturate(3);"> GH Actions</span>
-        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""> AZ Pipelines</span>
-        <span class="badge b-cyan"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt=""> Docker</span>
-        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt=""> ArgoCD</span>
+        <span class="badge b-red"><img class="badge-img" src="https://cdn.simpleicons.org/jenkins/d24939" alt=""> Jenkins</span>
+        <span class="badge b-grn"><img class="badge-img" src="https://cdn.simpleicons.org/github/ffffff" alt=""> GH Actions</span>
+        <span class="badge b-blue"><img class="badge-img" src="https://cdn.simpleicons.org/microsoftazure/0078d4" alt=""> AZ Pipelines</span>
+        <span class="badge b-cyan"><img class="badge-img" src="https://cdn.simpleicons.org/docker/2496ed" alt=""> Docker</span>
+        <span class="badge b-blue"><img class="badge-img" src="https://cdn.simpleicons.org/argo/ef7b4d" alt=""> ArgoCD</span>
         <span class="badge b-purp">⛑️ Helm</span>
-        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt=""> Ansible</span>
+        <span class="badge b-grn"><img class="badge-img" src="https://cdn.simpleicons.org/ansible/ee0000" alt=""> Ansible</span>
         <span class="badge b-ora">📦 Packer</span>
       </div>
     </div>
@@ -514,8 +509,8 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
         <span class="badge b-ora">🪣 S3 / IAM</span>
         <span class="badge b-ora">⚡ Fargate / Lambda</span>
         <span class="badge b-ora">👁️ CloudWatch</span>
-        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""> AKS / ACR</span>
-        <span class="badge b-purp"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt=""> Terraform</span>
+        <span class="badge b-blue"><img class="badge-img" src="https://cdn.simpleicons.org/microsoftazure/0078d4" alt=""> AKS / ACR</span>
+        <span class="badge b-purp"><img class="badge-img" src="https://cdn.simpleicons.org/terraform/7b42bc" alt=""> Terraform</span>
       </div>
     </div>
 
@@ -532,7 +527,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
         <span class="badge b-grn">📊 SonarQube</span>
         <span class="badge b-grn">🛡️ Semgrep</span>
         <span class="badge b-ora">🔐 GitGuardian</span>
-        <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""> Entra ID</span>
+        <span class="badge b-blue"><img class="badge-img" src="https://cdn.simpleicons.org/microsoftazure/0078d4" alt=""> Entra ID</span>
       </div>
     </div>
 
@@ -541,8 +536,8 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="sp-cat">Observability</div>
       <div class="sp-name">Monitoring & Alerting</div>
       <div class="sp-badges">
-        <span class="badge b-teal"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt=""> Grafana Cloud</span>
-        <span class="badge b-purp"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt=""> Prometheus</span>
+        <span class="badge b-teal"><img class="badge-img" src="https://cdn.simpleicons.org/grafana/f46800" alt=""> Grafana Cloud</span>
+        <span class="badge b-purp"><img class="badge-img" src="https://cdn.simpleicons.org/prometheus/e6522c" alt=""> Prometheus</span>
         <span class="badge b-ora">☁️ CloudWatch</span>
         <span class="badge b-cyan">🔔 AWS SNS</span>
         <span class="badge b-grn">📋 SLO / SLA</span>
@@ -555,12 +550,12 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="sp-cat">Code</div>
       <div class="sp-name">Languages & Scripting</div>
       <div class="sp-badges">
-        <span class="badge b-yel"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt=""> Python</span>
-        <span class="badge b-grn" style="color:#8bc34a;border-color:rgba(139,195,74,0.3);background:rgba(139,195,74,0.06);"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt=""> Bash</span>
+        <span class="badge b-yel"><img class="badge-img" src="https://cdn.simpleicons.org/python/ffd43b" alt=""> Python</span>
+        <span class="badge b-grn" style="color:#8bc34a;border-color:rgba(139,195,74,0.3);background:rgba(139,195,74,0.06);"><img class="badge-img" src="https://cdn.simpleicons.org/gnubash/8bc34a" alt=""> Bash</span>
         <span class="badge b-blue">💙 PowerShell</span>
         <span class="badge b-cyan">📄 YAML</span>
-        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""> Git</span>
-        <span class="badge b-grn"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""> Linux</span>
+        <span class="badge b-grn"><img class="badge-img" src="https://cdn.simpleicons.org/git/f05032" alt=""> Git</span>
+        <span class="badge b-grn"><img class="badge-img" src="https://cdn.simpleicons.org/linux/fcc624" alt=""> Linux</span>
       </div>
     </div>
 
@@ -598,8 +593,8 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="proj-stack">
         <span class="badge b-ora" style="font-size:.58rem;padding:.2rem .5rem;">⚡ Lambda</span>
         <span class="badge b-ora" style="font-size:.58rem;padding:.2rem .5rem;">🪣 S3</span>
-        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt=""> Terraform</span>
-        <span class="badge b-yel" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt=""> Python</span>
+        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.simpleicons.org/terraform/7b42bc" alt=""> Terraform</span>
+        <span class="badge b-yel" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.simpleicons.org/python/ffd43b" alt=""> Python</span>
       </div>
     </div>
 
@@ -612,11 +607,11 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
         <li>ArgoCD tracks every deploy. Dev and prod stay isolated. Nothing ships without a full audit trail of who pushed what.</li>
       </ul>
       <div class="proj-stack">
-        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""> AKS</span>
-        <span class="badge b-cyan" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt=""> Docker</span>
-        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt=""> ArgoCD</span>
+        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.simpleicons.org/microsoftazure/0078d4" alt=""> AKS</span>
+        <span class="badge b-cyan" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.simpleicons.org/docker/2496ed" alt=""> Docker</span>
+        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.simpleicons.org/argo/ef7b4d" alt=""> ArgoCD</span>
         <span class="badge b-cyan" style="font-size:.58rem;padding:.2rem .5rem;">NGINX Ingress</span>
-        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt=""> K8s</span>
+        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.simpleicons.org/kubernetes/326ce5" alt=""> K8s</span>
       </div>
     </div>
 
@@ -629,11 +624,11 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
         <li>Parallel test stages and Docker layer caching cut build-to-deploy time by 35%. Caught 2 critical CVEs before they ever hit production.</li>
       </ul>
       <div class="proj-stack">
-        <span class="badge b-red" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt=""> Jenkins</span>
+        <span class="badge b-red" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.simpleicons.org/jenkins/d24939" alt=""> Jenkins</span>
         <span class="badge b-grn" style="font-size:.58rem;padding:.2rem .5rem;">SonarQube</span>
         <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;">Trivy</span>
-        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt=""> ArgoCD</span>
-        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt=""> K8s</span>
+        <span class="badge b-blue" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.simpleicons.org/argo/ef7b4d" alt=""> ArgoCD</span>
+        <span class="badge b-purp" style="font-size:.58rem;padding:.2rem .5rem;"><img class="badge-img" src="https://cdn.simpleicons.org/kubernetes/326ce5" alt=""> K8s</span>
       </div>
     </div>
 
@@ -812,5 +807,7 @@ function type(){
 }
 type();
 
-const obs=new IntersectionObserver(entries=>{
-  entries.
+// scroll animations handled via CSS
+</script>
+</body>
+</html>
