@@ -336,7 +336,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
     </h1>
     <p class="hero-role"><span id="typed-text"></span><span class="typed-cur"></span></p>
 
-    <p class="hero-desc">I obsess over two things: systems that don't break and cloud bills that don't surprise you. Three months into a role, I had already cut AWS spend by 36%, locked down a full security audit, and shipped a monitoring system that catches issues in under 60 seconds.</p>
+    <p class="hero-desc">I obsess over two things: systems that don't break and cloud bills that don't surprise me</p>
 
     <div class="badge-strip">
       <span class="badge b-ora">☁️ AWS</span>
@@ -357,7 +357,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
     </div>
 
     <div class="hero-cta">
-      <a href="mailto:anuragjosyula17@gmail.com" class="btn btn-primary">⚡ Connect</a>
+      <a href="/cdn-cgi/l/email-protection#b0d1dec5c2d1d7dadfc3c9c5dcd18187f0d7ddd1d9dc9ed3dfdd" class="btn btn-primary">⚡ Connect</a>
       <a href="https://www.linkedin.com/in/anurag-josyula/" target="_blank" class="btn btn-outline">LinkedIn</a>
       <a href="https://github.com/anuragjosyula" target="_blank" class="btn btn-outline">GitHub</a>
     </div>
@@ -415,16 +415,16 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
   </div>
   <div class="story-grid">
     <div class="story-block">
-      <p>I got into DevOps because I was tired of watching smart engineers waste time on problems that shouldn't exist. Flaky deployments. Cloud bills nobody could explain. On-call alerts that fired at 2am for things that weren't actually broken.</p>
-      <p>My MS in Computer Engineering gave me the fundamentals. But the real learning happened on actual production systems, under real pressure. That's where I figured out what actually matters.</p>
-      <p><span class="story-highlight">I don't just automate tasks.</span> I try to understand why the manual process existed, what breaks when you remove it, and how to make the automated version more trustworthy than the human one was.</p>
+      <p>What pulled me into DevOps was the architecture. The first time I understood how a CI/CD pipeline actually works end-to-end, how a commit triggers a build, runs tests, packages a container, and ships to production with no human touching it, I wanted to build more of that.</p>
+      <p>Then Kubernetes clicked. The way it handles scheduling, self-healing, rollbacks, and resource allocation across nodes. <span class="story-highlight">It's a genuinely interesting system to understand</span>, and an even better one to run in production when you know what's happening under the hood.</p>
+      <p>That curiosity is why I'm here. Every role has been a chance to go deeper: more complex pipelines, tighter security guardrails, better observability. I build solutions because I want to understand how things actually work.</p>
     </div>
     <div class="story-block">
-      <p>Right now I'm at Vibes Meet LLC, keeping 7 production APIs healthy for 10k+ users. Before that, Chicago Education Advocacy Cooperative, where I walked into a team drowning in deployment failures and left them with a working GitOps setup.</p>
+      <p>My MS in Computer Engineering gave me the foundation. Production systems gave me the rest. There's a version of engineering you learn in school, and a different one you learn when rollbacks have to work at 2am and someone's watching.</p>
       <div class="q-block">
-        <p>The question I ask at every job: what's the most expensive thing people are doing manually that nobody has stopped to question?</p>
+        <p>I care about the rollback as much as the deploy. Anyone can ship. The interesting part is making sure you can always get back to a good state, fast, without a runbook that's six months out of date.</p>
       </div>
-      <p style="margin-top:1rem;">I'm based in NJ, AWS Certified Solutions Architect, and always interested in teams that care about reliability as much as speed.</p>
+      <p style="margin-top:1rem;">AWS Certified Solutions Architect. Based in NJ. Interested in teams building infrastructure that actually has to stay up.</p>
     </div>
   </div>
 </section>
@@ -459,9 +459,10 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       </div>
       <div class="exp-co">Chicago Education Advocacy Cooperative — Chicago, IL (Contract)</div>
       <ul class="exp-pts">
-        <li>Four services with no CI/CD and recurring deployment failures. I rebuilt the Terraform setup for <strong>Amazon EKS</strong> from scratch. Failures dropped <strong>40%</strong> in two weeks.</li>
-        <li>Set up GitHub Actions pipelines, NGINX Ingress, and Kubernetes RBAC so services only touch what they're supposed to. No more cross-service permission bleed.</li>
-        <li>Standardized the release process. What used to take 45 minutes now takes under 30, on every deploy, not just the good ones.</li>
+        <li>The CI/CD setup existed but was fragile. Investigated recurring deployment failures across 4 services and rebuilt the Terraform configuration to stabilize the <strong>AKS</strong> clusters. Deployment failures dropped <strong>40%</strong> within two weeks.</li>
+        <li>Added security guardrails that weren't there before: <strong>Semgrep</strong> for static analysis, <strong>GitGuardian</strong> for secret scanning, and enforced branch protection with mandatory PR checks before anything could reach production.</li>
+        <li>Configured <strong>NGINX Ingress</strong> and Kubernetes RBAC across dev and prod namespaces. Services only touch what they're supposed to. Azure Monitor alerts on pod crashes, CPU/memory thresholds, and HTTP error rates cut incident detection to under 5 minutes.</li>
+        <li>Standardized the release workflow. Average release time went from 45 minutes to under 30, consistently.</li>
       </ul>
     </div>
 
@@ -529,6 +530,8 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
         <span class="badge b-blue">🌐 NGINX Ingress</span>
         <span class="badge b-purp">🔍 Trivy</span>
         <span class="badge b-grn">📊 SonarQube</span>
+        <span class="badge b-grn">🛡️ Semgrep</span>
+        <span class="badge b-ora">🔐 GitGuardian</span>
         <span class="badge b-blue"><img class="badge-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt=""> Entra ID</span>
       </div>
     </div>
@@ -717,7 +720,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
     <h2 class="sec-title">Get in Touch</h2>
     <p class="contact-desc">If you're building something that needs to stay up, deploy fast, and not break the bank, I'd like to hear about it.</p>
     <div class="contact-links">
-      <a href="mailto:anuragjosyula17@gmail.com" class="btn btn-primary">⚡ anuragjosyula17@gmail.com</a>
+      <a href="/cdn-cgi/l/email-protection#51303f242330363b3e2228243d30606611363c30383d7f323e3c" class="btn btn-primary">⚡ <span class="__cf_email__" data-cfemail="7f1e110a0d1e1815100c060a131e4e483f18121e1613511c1012">[email&#160;protected]</span></a>
       <a href="https://www.linkedin.com/in/anurag-josyula/" target="_blank" class="btn btn-outline">LinkedIn</a>
       <a href="https://github.com/anuragjosyula" target="_blank" class="btn btn-outline">GitHub</a>
     </div>
@@ -733,7 +736,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
   Anurag Josyula &nbsp;·&nbsp; DevOps Engineer &nbsp;·&nbsp; NJ &nbsp;·&nbsp; Open to roles
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const cur=document.getElementById('cur');
 const trail=document.getElementById('cur-trail');
 let mx=0,my=0,tx=0,ty=0;
@@ -810,9 +813,4 @@ function type(){
 type();
 
 const obs=new IntersectionObserver(entries=>{
-  entries.forEach(en=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('vis'),+(en.target.dataset.d||0));});
-},{threshold:0.1});
-document.querySelectorAll('.exp-card,.skill-panel,.proj-card,.cert-card,.hobby-card').forEach((el,i)=>{el.dataset.d=(i%4)*100;obs.observe(el);});
-</script>
-</body>
-</html>
+  entries.
