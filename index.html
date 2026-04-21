@@ -352,7 +352,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
     </div>
 
     <div class="hero-cta">
-      <a href="/cdn-cgi/l/email-protection#b0d1dec5c2d1d7dadfc3c9c5dcd18187f0d7ddd1d9dc9ed3dfdd" class="btn btn-primary">⚡ Connect</a>
+      <a href="mailto:anuragjosyula17@gmail.com" class="btn btn-primary">⚡ Connect</a>
       <a href="https://www.linkedin.com/in/anurag-josyula/" target="_blank" class="btn btn-outline">LinkedIn</a>
       <a href="https://github.com/anuragjosyula" target="_blank" class="btn btn-outline">GitHub</a>
     </div>
@@ -360,11 +360,11 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
 
   <div class="hero-right">
     <div class="stat-card">
-      <div class="stat-icon">💰</div>
+      <div class="stat-icon">🤖</div>
       <div>
-        <div class="stat-val">36%</div>
-        <div class="stat-lbl">AWS COSTS CUT</div>
-        <div class="stat-sub">Found and killed idle spend</div>
+        <div class="stat-val">60%</div>
+        <div class="stat-lbl">MANUAL REVIEW ELIMINATED</div>
+        <div class="stat-sub">AI moderation pipeline via Rekognition</div>
       </div>
     </div>
     <div class="stat-card">
@@ -372,7 +372,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div>
         <div class="stat-val">99.9%</div>
         <div class="stat-lbl">UPTIME, CONSISTENTLY</div>
-        <div class="stat-sub">10,000+ users never noticed</div>
+        <div class="stat-sub">500K+ member-facing applications</div>
       </div>
     </div>
     <div class="stat-card">
@@ -384,19 +384,19 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       </div>
     </div>
     <div class="stat-card">
-      <div class="stat-icon">🛡️</div>
+      <div class="stat-icon">⚡</div>
       <div>
-        <div class="stat-val">40%</div>
-        <div class="stat-lbl">FEWER FAILED DEPLOYS</div>
-        <div class="stat-sub">Kubernetes did the heavy lifting</div>
+        <div class="stat-val">50%</div>
+        <div class="stat-lbl">FASTER BOOTSTRAP TIME</div>
+        <div class="stat-sub">Hardened AMIs via Packer + Ansible</div>
       </div>
     </div>
     <div class="stat-card">
       <div class="stat-icon">⏱️</div>
       <div>
-        <div class="stat-val">25%</div>
-        <div class="stat-lbl">FASTER INCIDENT CLOSE</div>
-        <div class="stat-sub">Runbooks that actually get used</div>
+        <div class="stat-val">40%</div>
+        <div class="stat-lbl">FASTER INCIDENT DETECT</div>
+        <div class="stat-sub">Fluent Bit + CloudWatch + SNS to Slack</div>
       </div>
     </div>
   </div>
@@ -434,30 +434,17 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
     <div class="exp-card">
       <div class="exp-top">
         <div class="exp-title">DevOps Engineer</div>
-        <div class="exp-period">NOV 2025 – PRESENT</div>
+        <div class="exp-period">AUG 2025 – PRESENT</div>
       </div>
       <div class="exp-co">Vibes Meet LLC — New York, NY</div>
       <ul class="exp-pts">
-        <li>Rebuilt the release process from scratch using <strong>GitHub Actions + Docker</strong>. Manual deploys that used to require babysitting now run unattended every sprint.</li>
-        <li>Did a full AWS spend audit. Found idle ECS tasks, oversized EC2 instances across 3 environments. Killed them. Bill dropped <strong>36% month-over-month</strong>.</li>
-        <li>Running 7 production API services on <strong>ECS Fargate</strong>. 10,000+ monthly active users. CloudWatch Logs Insights keeps me honest on HTTP 5xx rates and p99 latency.</li>
-        <li>Built alerting that fires in <strong>under 60 seconds</strong> via Slack. Users find out from the app, not from us.</li>
-        <li>Hardened VPC, IAM, and security groups. Zero open findings on the third-party security audit.</li>
-        <li>Wrote the runbooks everyone said they'd write and never did. On-call resolution dropped <strong>25%</strong> because the next person on shift actually knew what to do.</li>
-      </ul>
-    </div>
-
-    <div class="exp-card">
-      <div class="exp-top">
-        <div class="exp-title">DevOps Engineer</div>
-        <div class="exp-period">AUG – OCT 2025</div>
-      </div>
-      <div class="exp-co">Chicago Education Advocacy Cooperative — Chicago, IL (Contract)</div>
-      <ul class="exp-pts">
-        <li>The CI/CD setup existed but was fragile. Investigated recurring deployment failures across 4 services and rebuilt the Terraform configuration to stabilize the <strong>AKS</strong> clusters. Deployment failures dropped <strong>40%</strong> within two weeks.</li>
-        <li>Added security guardrails that weren't there before: <strong>Semgrep</strong> for static analysis, <strong>GitGuardian</strong> for secret scanning, and enforced branch protection with mandatory PR checks before anything could reach production.</li>
-        <li>Configured <strong>NGINX Ingress</strong> and Kubernetes RBAC across dev and prod namespaces. Services only touch what they're supposed to. Azure Monitor alerts on pod crashes, CPU/memory thresholds, and HTTP error rates cut incident detection to under 5 minutes.</li>
-        <li>Standardized the release workflow. Average release time went from 45 minutes to under 30, consistently.</li>
+        <li>Designed and deployed a multi-service <strong>AWS ECS</strong> architecture integrating RDS, EventBridge, and SQS for payments, content delivery, and live streaming. Maintained <strong>sub-200ms API latency</strong> at 10,000+ concurrent users.</li>
+        <li>Built hardened AMIs using <strong>Packer</strong> and automated EC2 provisioning with <strong>Ansible</strong>, reducing instance bootstrap time by <strong>50%</strong> and ensuring consistent, secure runtime environments.</li>
+        <li>Developed reusable <strong>Terraform modules</strong> for ECS, VPC, IAM, ALB, and ECR, reducing infrastructure provisioning by <strong>26%</strong> across dev, staging, and production.</li>
+        <li>Built <strong>GitHub Actions</strong> CI/CD pipelines with Docker builds, Trivy security scans, and automated ECS deployments with rollback mechanisms, reducing deployment time by <strong>35%</strong>.</li>
+        <li>Engineered an AI-driven content moderation pipeline using <strong>AWS Rekognition + Lambda</strong>, automatically scanning user-uploaded media, reducing manual review workload by <strong>60%</strong>.</li>
+        <li>Built centralized logging and alerting using <strong>Fluent Bit + CloudWatch + SNS to Slack</strong>, reducing mean time to detect production issues by <strong>40%</strong>.</li>
+        <li>Provisioned <strong>Amazon RDS Multi-AZ</strong> with cross-region read replicas via Terraform for high availability and disaster recovery across AWS regions.</li>
       </ul>
     </div>
 
@@ -468,9 +455,24 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       </div>
       <div class="exp-co">George Mason University — Fairfax, VA</div>
       <ul class="exp-pts">
-        <li>Wrote <strong>PowerShell + Entra ID</strong> scripts that cut new user onboarding from hours to minutes. Did this for a 5,000-person campus without any dedicated DevOps team.</li>
-        <li>Kept Microsoft 365 clean: Exchange Online, Intune, distribution groups. Device compliance stayed above <strong>95%</strong> across all managed endpoints.</li>
+        <li>Automated user provisioning and license assignment across Microsoft 365 using <strong>PowerShell and Entra ID</strong>, reducing onboarding time by <strong>40%</strong> across a 5,000-user environment.</li>
+        <li>Managed Exchange Online mailboxes, distribution groups, and <strong>Microsoft Intune</strong> endpoint compliance, maintaining device compliance rates above <strong>95%</strong>.</li>
         <li>First-line support across Windows, macOS, and Linux. <strong>95% of tickets</strong> closed within SLA, no escalation needed.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-top">
+        <div class="exp-title">DevOps Engineer</div>
+        <div class="exp-period">MAY 2021 – MAY 2023</div>
+      </div>
+      <div class="exp-co">NationsBenefits — Hyderabad, India</div>
+      <ul class="exp-pts">
+        <li>Built and maintained <strong>Azure DevOps CI/CD pipelines</strong> for 12+ microservices on a healthcare CRM serving <strong>500K+ members</strong>, integrating SAST, Docker, ACR, Helm, and AKS, reducing release cycle time by <strong>40%</strong>.</li>
+        <li>Authored <strong>Terraform</strong> infrastructure for AKS, Virtual Networks, NSGs, ACR, Key Vault, and Log Analytics across 4+ environments, eliminating configuration drift through modular IaC and remote state.</li>
+        <li>Built hardened Azure VM images using <strong>Packer + Ansible</strong>, reducing environment setup time by <strong>50%</strong> and improving deployment consistency by <strong>80%</strong>.</li>
+        <li>Containerized and deployed workloads on <strong>AKS</strong> with optimized resource limits, health probes, and rolling updates, improving compute utilization by <strong>28%</strong> and maintaining <strong>99.9% uptime</strong>.</li>
+        <li>Implemented <strong>Azure Monitor + Log Analytics</strong> dashboards with alerting pipelines, reducing mean time to detect incidents by <strong>35%</strong> and improving operational visibility across environments.</li>
       </ul>
     </div>
 
@@ -497,6 +499,10 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
         <span class="badge b-purp">⛑️ Helm</span>
         <span class="badge b-grn"><img class="badge-img" src="https://cdn.simpleicons.org/ansible/ee0000" alt=""> Ansible</span>
         <span class="badge b-ora">📦 Packer</span>
+        <span class="badge b-grn">📊 SonarQube</span>
+        <span class="badge b-teal">🛡️ Semgrep</span>
+        <span class="badge b-ora">🔐 GitGuardian</span>
+        <span class="badge b-purp">🔍 Trivy</span>
       </div>
     </div>
 
@@ -506,11 +512,16 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="sp-name">Cloud Platforms</div>
       <div class="sp-badges">
         <span class="badge b-ora">☁️ EC2 / ECS / EKS</span>
-        <span class="badge b-ora">🪣 S3 / IAM</span>
+        <span class="badge b-ora">🪣 S3 / IAM / VPC</span>
         <span class="badge b-ora">⚡ Fargate / Lambda</span>
-        <span class="badge b-ora">👁️ CloudWatch</span>
-        <span class="badge b-blue"><img class="badge-img" src="https://cdn.simpleicons.org/microsoftazure/0078d4" alt=""> AKS / ACR</span>
+        <span class="badge b-ora">🗄️ RDS / SQS / SNS</span>
+        <span class="badge b-ora">🔗 EventBridge / ALB</span>
+        <span class="badge b-ora">🔑 Secrets Manager</span>
+        <span class="badge b-ora">👁️ CloudWatch / CloudTrail</span>
+        <span class="badge b-blue"><img class="badge-img" src="https://cdn.simpleicons.org/microsoftazure/0078d4" alt=""> AKS / ACR / Key Vault</span>
+        <span class="badge b-blue">🔷 Azure Functions</span>
         <span class="badge b-purp"><img class="badge-img" src="https://cdn.simpleicons.org/terraform/7b42bc" alt=""> Terraform</span>
+        <span class="badge b-cyan">🔴 OpenShift</span>
       </div>
     </div>
 
@@ -520,14 +531,14 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
       <div class="sp-name">Security & Networking</div>
       <div class="sp-badges">
         <span class="badge b-cyan">🛡️ VPC / SG</span>
-        <span class="badge b-cyan">🔑 IAM SSO</span>
+        <span class="badge b-cyan">🔑 IAM / RBAC</span>
         <span class="badge b-teal">🔒 TLS / MFA</span>
         <span class="badge b-blue">🌐 NGINX Ingress</span>
-        <span class="badge b-purp">🔍 Trivy</span>
-        <span class="badge b-grn">📊 SonarQube</span>
-        <span class="badge b-grn">🛡️ Semgrep</span>
-        <span class="badge b-ora">🔐 GitGuardian</span>
+        <span class="badge b-grn">⚖️ PCI-DSS</span>
+        <span class="badge b-teal">🏥 HITRUST</span>
+        <span class="badge b-ora">🔐 DevSecOps</span>
         <span class="badge b-blue"><img class="badge-img" src="https://cdn.simpleicons.org/microsoftazure/0078d4" alt=""> Entra ID</span>
+        <span class="badge b-purp">🔍 SAST</span>
       </div>
     </div>
 
@@ -539,9 +550,13 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
         <span class="badge b-teal"><img class="badge-img" src="https://cdn.simpleicons.org/grafana/f46800" alt=""> Grafana Cloud</span>
         <span class="badge b-purp"><img class="badge-img" src="https://cdn.simpleicons.org/prometheus/e6522c" alt=""> Prometheus</span>
         <span class="badge b-ora">☁️ CloudWatch</span>
-        <span class="badge b-cyan">🔔 AWS SNS</span>
-        <span class="badge b-grn">📋 SLO / SLA</span>
+        <span class="badge b-cyan">📡 Fluent Bit</span>
         <span class="badge b-blue">📡 Azure Monitor</span>
+        <span class="badge b-purp">🐕 Datadog</span>
+        <span class="badge b-red">📟 PagerDuty</span>
+        <span class="badge b-grn">🔍 Splunk</span>
+        <span class="badge b-teal">📚 ELK Stack</span>
+        <span class="badge b-grn">📋 SLO / SLA</span>
       </div>
     </div>
 
@@ -553,7 +568,8 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
         <span class="badge b-yel"><img class="badge-img" src="https://cdn.simpleicons.org/python/ffd43b" alt=""> Python</span>
         <span class="badge b-grn" style="color:#8bc34a;border-color:rgba(139,195,74,0.3);background:rgba(139,195,74,0.06);"><img class="badge-img" src="https://cdn.simpleicons.org/gnubash/8bc34a" alt=""> Bash</span>
         <span class="badge b-blue">💙 PowerShell</span>
-        <span class="badge b-cyan">📄 YAML</span>
+        <span class="badge b-cyan">📄 YAML / HCL</span>
+        <span class="badge b-ora">🗄️ SQL</span>
         <span class="badge b-grn"><img class="badge-img" src="https://cdn.simpleicons.org/git/f05032" alt=""> Git</span>
         <span class="badge b-grn"><img class="badge-img" src="https://cdn.simpleicons.org/linux/fcc624" alt=""> Linux</span>
       </div>
@@ -562,13 +578,14 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
     <div class="skill-panel" style="border-color:rgba(0,245,255,0.25);background:linear-gradient(135deg,var(--card),rgba(0,119,255,0.04));">
       <div class="sp-icon">🤖</div>
       <div class="sp-cat">AI & Tooling</div>
-      <div class="sp-name">AI-Assisted DevOps</div>
+      <div class="sp-name">ML Platform Engineering</div>
       <div class="sp-badges">
+        <span class="badge b-ora">👁️ AWS Rekognition</span>
         <span class="badge b-purp">🤖 GitHub Copilot</span>
-        <span class="badge b-teal">⚡ LLM-Assisted Scripting</span>
-        <span class="badge b-cyan">🧠 AI-Driven Monitoring</span>
+        <span class="badge b-teal">⚡ Lambda ML Inference</span>
+        <span class="badge b-cyan">📈 K8s HPA + Custom Metrics</span>
         <span class="badge b-blue">🔁 Automated Remediation</span>
-        <span class="badge b-grn">📈 Anomaly Detection</span>
+        <span class="badge b-grn">📊 Anomaly Detection</span>
       </div>
     </div>
 
@@ -715,12 +732,13 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
     <h2 class="sec-title">Get in Touch</h2>
     <p class="contact-desc">If you're building something that needs to stay up, deploy fast, and not break the bank, I'd like to hear about it.</p>
     <div class="contact-links">
-      <a href="mailto:anuragjosyula17@gmail.com" class="btn btn-primary">⚡ Email/a>
+      <a href="mailto:anuragjosyula17@gmail.com" class="btn btn-primary">⚡ Email</a>
       <a href="https://www.linkedin.com/in/anurag-josyula/" target="_blank" class="btn btn-outline">LinkedIn</a>
       <a href="https://github.com/anuragjosyula" target="_blank" class="btn btn-outline">GitHub</a>
     </div>
     <div class="c-info">
       <div class="c-item"><span>📍</span>Kendall Park, NJ</div>
+      <div class="c-item"><span>📞</span>+1-202-960-8415</div>
     </div>
   </div>
 </section>
@@ -731,7 +749,7 @@ footer{position:relative;z-index:2;text-align:center;padding:1.75rem;border-top:
   Anurag Josyula &nbsp;·&nbsp; DevOps Engineer &nbsp;·&nbsp; NJ &nbsp;·&nbsp; Open to roles
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const cur=document.getElementById('cur');
 const trail=document.getElementById('cur-trail');
 let mx=0,my=0,tx=0,ty=0;
@@ -806,8 +824,6 @@ function type(){
   else{tel.textContent=w.slice(0,ci-1);ci--;if(ci===0){del=false;ri=(ri+1)%roles.length;setTimeout(type,450);return;}setTimeout(type,35);}
 }
 type();
-
-// scroll animations handled via CSS
 </script>
 </body>
 </html>
