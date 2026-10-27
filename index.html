@@ -360,6 +360,15 @@ code{font-family:var(--mono);font-size:.84em;background:rgba(47,107,255,.1);padd
     <div class="sec-head reveal"><div class="sec-tag">Things I've Built</div><h2 class="sec-title">Projects</h2></div>
     <div class="proj-grid">
       <div class="proj-card reveal">
+        <div class="proj-date">OCT 2026</div>
+        <div class="proj-title">Autonomous FinOps Agent</div>
+        <ul class="proj-pts">
+          <li>Watches the AWS bill daily. On a cost spike it correlates the CloudTrail change and has Amazon Bedrock (Claude) post a root cause and fix to Slack &mdash; no human in the loop.</li>
+          <li>Reads the raw Cost &amp; Usage Report via Athena for resource-level detail, and flags brand-new cost sources a percentage threshold would miss. Runs for ~$2&ndash;3/month.</li>
+        </ul>
+        <div class="proj-stack"><span class="badge b-ora">Bedrock</span><span class="badge b-ora">Lambda</span><span class="badge b-purp">Athena</span><span class="badge b-teal">CloudTrail</span><span class="badge b-yel">Python</span></div>
+      </div>
+      <div class="proj-card reveal">
         <div class="proj-date">MAR 2026</div>
         <div class="proj-title">Serverless Image Processing Pipeline</div>
         <ul class="proj-pts">
